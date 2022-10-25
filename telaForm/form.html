@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Organizações Tabajara</title>
+</head>
+<body >
+    <header>
+        <h1>Organizações Tabajara</h1>
+        <nav>
+            <a href="http://127.0.0.1:5501/telaMAIN/main.html">Quem somos</a>
+            <a href="http://127.0.0.1:5501/telaForm/form.html">Trabalhe conosco</a>
+            <a href="http://127.0.0.1:5501/telaVagas/vagas.html">Vagas</a>
+            <a href="http://127.0.0.1:5501/telaGaleria/galeria.html">Galeria</a>
+            <a href="http://127.0.0.1:5501/telaConsultar/consultar.html">Consultar</a>
+        </nav>
+    </header>
+    <main class="content">
+            <h2>Cadastro DEV's</h2>
+            <form method="post" id="form">
+                <div>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" class="inputs required" oninput="validarNome()">
+                    <span class="span-required">Nome deve ter no mínimo 3 caracteres.</span>
+                </div>
+                <div>
+                    <label for="email"><input type="email" name="email" id="email" placeholder="Digite seu melhor e-mail" class="inputs required" oninput="validarEmail()"></label>
+                    <span class="span-required" >Digite um e-mail válido</span>
+                </div>
+                <div>
+                    <input type="password" name="password" id="password" placeholder="Digite sua senha" class="inputs required" oninput="validarSenha()">
+                    <span class="span-required" >Digite uma senha com no mínimo 8 caracteres</span>
+                </div>
+                <div>
+                    <input type="password" name="passwordConfirmation" id="passwordConfirmation" placeholder="Repita sua senha" class="inputs required" oninput="compararSenha()">
+                    <span class="span-required">Senhas devem ser identicas</span>
+                </div>
+                <textarea name="descricao" id="descricao" cols="25" rows="10" placeholder="Fale um pouco sobre você..." class="inputs textarea"></textarea>
+                <p>Sexo:</p>
+                <div class="box-select">
+                    <div>
+                        <input type="radio" name="sexo" id="masc" value="masc">
+                        <label for="masc">Masculino</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="sexo" id="fem" value="fem">
+                        <label for="fem">Feminino</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="sexo" id="outro" value="outro">
+                        <label for="outro">Outro</label>
+                    </div>
+                </div>
+                <p>Quais suas experiências?</p>
+                <div class="box-select">
+                    <div>
+                        <input type="checkbox" name="experiencia" id="html" value="html" class="tecnologia">
+                        <label for="html">HTML</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="experiencia" id="css" value="css" class="tecnologia">
+                        <label for="css">CSS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="experiencia" id="js" value="js" class="tecnologia">
+                        <label for="js">JavaScript</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="experiencia" id="php" value="php" class="tecnologia">
+                        <label for="php">PHP</label>
+                    </div>
+                </div>
+                <button type="submit" onclick="enviarDados()">Enviar</button>
+            </form>
+    </main>
+    <footer>
+        <p>Desenvolvido por: <a href="https://github.com/GuilhermeBarroz" target="_blank">Guilherme Barros</a>,<a href="http://www.linkedin.com/in/artur-andrade-8147b2144" target="_blank"> Artur Andrade</a>, <a href="https://www.linkedin.com/in/vitor-souza-350404249/">Vitor Souza</a></p>
+    </footer>
+</body>
+<script src="form.js"></script>
+</html>
